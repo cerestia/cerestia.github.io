@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"cerestia.github.io.git","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="记录学习内容">
+  <meta name="description" content="题目：在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 思路：从右上角开始查找， 当要查找数字比右上角数字大时，下移；当要查找数字比右上角数字小时，左移；如果出了边界，则说明二维数组中不存在该整数。 12345678910111213141516publi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
-<meta property="og:url" content="https://cerestia.github.io.git/2021/02/19/My-New-Post/index.html">
+<meta property="og:title" content="二维数组查找">
+<meta property="og:url" content="https://cerestia.github.io.git/2021/02/20/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="fish">
-<meta property="og:description" content="记录学习内容">
+<meta property="og:description" content="题目：在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 思路：从右上角开始查找， 当要查找数字比右上角数字大时，下移；当要查找数字比右上角数字小时，左移；如果出了边界，则说明二维数组中不存在该整数。 12345678910111213141516publi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-19T12:17:05.000Z">
-<meta property="article:modified_time" content="2021-02-19T12:17:05.569Z">
+<meta property="article:published_time" content="2021-02-20T15:37:39.000Z">
+<meta property="article:modified_time" content="2021-02-20T15:45:30.265Z">
 <meta property="article:author" content="fish">
+<meta property="article:tag" content="-矩阵">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://cerestia.github.io.git/2021/02/19/My-New-Post/">
+<link rel="canonical" href="https://cerestia.github.io.git/2021/02/20/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE/">
 
 
 <script id="page-configurations">
@@ -45,7 +46,7 @@
   };
 </script>
 
-  <title>My New Post | fish</title>
+  <title>二维数组查找 | fish</title>
   
 
 
@@ -151,7 +152,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://cerestia.github.io.git/2021/02/19/My-New-Post/">
+    <link itemprop="mainEntityOfPage" href="https://cerestia.github.io.git/2021/02/20/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%9F%A5%E6%89%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +165,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          My New Post
+          二维数组查找
         </h1>
 
         <div class="post-meta">
@@ -173,8 +174,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-02-19 20:17:05" itemprop="dateCreated datePublished" datetime="2021-02-19T20:17:05+08:00">2021-02-19</time>
+              <time title="Created: 2021-02-20 23:37:39 / Modified: 23:45:30" itemprop="dateCreated datePublished" datetime="2021-02-20T23:37:39+08:00">2021-02-20</time>
             </span>
 
           
@@ -188,7 +190,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>题目：<br>在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，<br>每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，<br>判断数组中是否含有该整数。</p>
+<p>思路：<br>从右上角开始查找，</p>
+<p>当要查找数字比右上角数字大时，下移；<br>当要查找数字比右上角数字小时，左移；<br>如果出了边界，则说明二维数组中不存在该整数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public boolean Find(int target, int [][] array) &#123;</span><br><span class="line">        int m &#x3D; array.length;</span><br><span class="line">        int n &#x3D; array[0].length;</span><br><span class="line">        for(int i&#x3D;0;i&lt;m;i++)&#123;</span><br><span class="line">                for(int j&#x3D;0;j&lt;array[0].length;j++)&#123;</span><br><span class="line">                    if(target&#x3D;&#x3D;array[i][j])&#123;</span><br><span class="line">                        return true;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">        </span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -196,6 +201,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%9F%A9%E9%98%B5/" rel="tag"># -矩阵</a>
+          </div>
 
         
 
@@ -203,13 +211,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/02/19/test-my-site/" rel="prev" title="test_my_site">
-      <i class="fa fa-chevron-left"></i> test_my_site
+    <a href="/2021/02/19/first-passage/" rel="prev" title="first passage">
+      <i class="fa fa-chevron-left"></i> first passage
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/02/19/first-passage/" rel="next" title="first passage">
-      first passage <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
