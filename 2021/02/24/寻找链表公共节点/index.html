@@ -20,19 +20,20 @@
     var CONFIG = {"hostname":"cerestia.github.io.git","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="记录学习内容">
+  <meta name="description" content="题目：输入两个链表，找出它们的第一个公共结点。（注意因为传入数据是链表，所以错误测试数据的提示是用其他方式显示的，保证传入数据是正确的） 思路：求出两个链表的长度，然后长的那个走到和短的一样长，接下来一起向后移动直到找到公共节点。复杂度:第一个链表长度为na+n,第二个链表长度为b+n，则复杂度为a+b+n 代码： 12345678910111213141516171819202122232425">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
-<meta property="og:url" content="https://cerestia.github.io.git/2021/02/19/My-New-Post/index.html">
+<meta property="og:title" content="寻找链表公共节点">
+<meta property="og:url" content="https://cerestia.github.io.git/2021/02/24/%E5%AF%BB%E6%89%BE%E9%93%BE%E8%A1%A8%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9/index.html">
 <meta property="og:site_name" content="fish">
-<meta property="og:description" content="记录学习内容">
+<meta property="og:description" content="题目：输入两个链表，找出它们的第一个公共结点。（注意因为传入数据是链表，所以错误测试数据的提示是用其他方式显示的，保证传入数据是正确的） 思路：求出两个链表的长度，然后长的那个走到和短的一样长，接下来一起向后移动直到找到公共节点。复杂度:第一个链表长度为na+n,第二个链表长度为b+n，则复杂度为a+b+n 代码： 12345678910111213141516171819202122232425">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-19T12:17:05.000Z">
-<meta property="article:modified_time" content="2021-02-19T12:17:05.569Z">
+<meta property="article:published_time" content="2021-02-24T14:18:45.000Z">
+<meta property="article:modified_time" content="2021-02-24T14:23:12.941Z">
 <meta property="article:author" content="fish">
+<meta property="article:tag" content="-链表">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://cerestia.github.io.git/2021/02/19/My-New-Post/">
+<link rel="canonical" href="https://cerestia.github.io.git/2021/02/24/%E5%AF%BB%E6%89%BE%E9%93%BE%E8%A1%A8%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9/">
 
 
 <script id="page-configurations">
@@ -45,7 +46,7 @@
   };
 </script>
 
-  <title>My New Post | fish</title>
+  <title>寻找链表公共节点 | fish</title>
   
 
 
@@ -151,7 +152,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://cerestia.github.io.git/2021/02/19/My-New-Post/">
+    <link itemprop="mainEntityOfPage" href="https://cerestia.github.io.git/2021/02/24/%E5%AF%BB%E6%89%BE%E9%93%BE%E8%A1%A8%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +165,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          My New Post
+          寻找链表公共节点
         </h1>
 
         <div class="post-meta">
@@ -173,8 +174,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-02-19 20:17:05" itemprop="dateCreated datePublished" datetime="2021-02-19T20:17:05+08:00">2021-02-19</time>
+              <time title="Created: 2021-02-24 22:18:45 / Modified: 22:23:12" itemprop="dateCreated datePublished" datetime="2021-02-24T22:18:45+08:00">2021-02-24</time>
             </span>
 
           
@@ -188,7 +190,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>题目：输入两个链表，找出它们的第一个公共结点。（注意因为传入数据是链表，<br>所以错误测试数据的提示是用其他方式显示的，保证传入数据是正确的）</p>
+<p>思路：求出两个链表的长度，然后长的那个走到和短的一样长，接下来一起向后移动<br>直到找到公共节点。<br>复杂度:第一个链表长度为na+n,第二个链表长度为b+n，则复杂度为a+b+n</p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">FindFirstCommonNode</span><span class="params">(ListNode pHead1, ListNode pHead2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(pHead2==<span class="keyword">null</span>||pHead1==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>; </span><br><span class="line">        ListNode current1 = pHead1;</span><br><span class="line">        ListNode current2 = pHead2;</span><br><span class="line">        <span class="keyword">int</span> len1 = listLength(pHead1);</span><br><span class="line">        <span class="keyword">int</span> len2 = listLength(pHead2);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(len1&gt;=len2)&#123;</span><br><span class="line">            <span class="keyword">int</span> dif = len1-len2;</span><br><span class="line">            <span class="keyword">while</span>(dif&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                current1 = current1.next;</span><br><span class="line">                dif--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(len1&lt;len2)&#123;</span><br><span class="line">            <span class="keyword">int</span> dif = len2-len1;</span><br><span class="line">            <span class="keyword">while</span>(dif&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                current2 = current2.next;</span><br><span class="line">                dif--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(current1!=current2)&#123;</span><br><span class="line">            current1=current1.next;</span><br><span class="line">            current2=current2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> current1;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">listLength</span><span class="params">(ListNode pHead)</span></span>&#123;</span><br><span class="line">        ListNode temp = pHead;</span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(temp!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            temp=temp.next;</span><br><span class="line">            len++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> len;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -196,6 +201,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag"># -链表</a>
+          </div>
 
         
 
@@ -203,13 +211,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/02/19/test-my-site/" rel="prev" title="test_my_site">
-      <i class="fa fa-chevron-left"></i> test_my_site
+    <a href="/2021/02/23/%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC%E4%B8%B2/" rel="prev" title="替换空格串">
+      <i class="fa fa-chevron-left"></i> 替换空格串
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/02/19/first-passage/" rel="next" title="first passage">
-      first passage <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
